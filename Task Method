@@ -1,0 +1,102 @@
+/**
+ * This code gets the information of a course. The name, the Code, the credits it gives, if the class was online, 
+ the amount needed to pay for the class, and what type of class it is. Such as 'A' for academic, 'B' for Basic etc.
+ This code allows students to input their class information to find out if they have the aquired prerequisites to 
+ apply to a different university class.
+ 
+ * @author Omaima Gohir
+ */
+
+
+//'Course' is the class
+public class Course 
+{
+    
+    //informtaion about the course is stored in the 'course' object.
+    information course;
+    
+/* Course is a method name. This method gets the value of each field and assigns it a value according to the variable 
+  of the new method. These are used to set values of the information object named 'course'. It stores information about
+  the course and the method assigns the given values to the corresponding fields within the object.
+  String, int, boolean, double, char are all parameter types. courseCode, courseName, credits, isOnline, tuition and 
+  courseType are all parameters. Parameters are values given to a method.
+*/    
+    public Course(String courseCode, String courseName, int credits, boolean isOnline, double tuition, char courseType) 
+    {
+        //creates a new instance of information and assignes it to the 'course' field
+        course = new information();
+        
+        //If user inputs a value into this method, the methods information will be equal to that of the fields value.
+        //'course' thats an object is called on 'courseCode' which is a field, and set to be equal to courseCode.
+        course.courseCode = courseCode;
+        //'course' thats an object is called on 'courseName' which is a field, and set to be equal to courseName.
+        course.courseName = courseName;
+        //'course' thats an object is called on 'credits' which is a field, and set to be equal to credits.
+        course.credits = credits;
+        //'course' thats an object is called on 'isOnline' which is a field, and set to be equal to isOnline.
+        course.isOnline = isOnline;
+        //'course' thats an object is called on 'tuition' which is a field, and set to be equal to tuition.
+        course.tuition = tuition;
+        //'course' thats an object is called on 'courseType' which is a field, and set to be equal to courseType.
+        course.courseType = courseType;
+    }
+    
+    //gets the courseCode, which has the return value of String. the methods name is 'getCourseCode' which has no parameters.
+    public String getCourseCode() 
+    {
+        //stores the new value of course.courseCode
+        return course.courseCode;
+    }
+    
+    //gets the courseName, which has the return value of String. the methods name is 'getCourseName' which has no parameters.
+    public String getCourseName() 
+    {
+        //stores the new value of course.courseName
+        return course.courseName;
+    }
+    
+    /*checks if the boolean of is an online class true or false. Returns the value of boolean. the methods name is 'isOnline' 
+      which has no parameters.
+     */
+    public boolean isOnline() 
+    {
+        //stores the new value of course.isOnline
+        return course.isOnline;
+    }
+    
+    /*checks the amount of tuition fee. the methods name is 'getTuition' which has no parameters, and returns the returntype 
+      of double on the variable of course.tuition.
+     */
+    public double getTuition() 
+    {
+        //stores the new value of course.tuition
+        return course.tuition;
+    }
+    
+    /*checks the type of course it is, such as 'A' for Academic, 'B' for Basic, the methods name is 'getCourseType' which has
+      no parameters. it has a return type of char
+    */
+    public char getCourseType()
+    {
+        //stores the new value of course.courseType
+        return course.courseType;
+    }
+}
+
+// 'information' is a class
+public class information 
+{
+//vaiable declaration, also known as fields. Fields are avriables declared outside of Methods.
+    //courseCode is a variable with the variable type of string. it holds the value of the course CODE.
+    String courseCode;
+    //courseName is a variable with thte variable type of String. It holds the value of the course name.
+    String courseName;
+    //credits is a variable, with the variable type of integer. It holds the amount of credits this course is.
+    int credits;
+    //isOnline is a variable with the variable type of boolean(true or false). It holds the statement on if the class was an online class. 
+    boolean isOnline;
+    //tuition is a variable , with the variable of type double. Holds the decimal number for how much the tuition (Class) costs.
+    double tuition;
+    //courseType is a variable with the type of char. Holds the char, which is character type. Classifications such as A for ;Academic' B for 'Basic'
+    char courseType;
+}
